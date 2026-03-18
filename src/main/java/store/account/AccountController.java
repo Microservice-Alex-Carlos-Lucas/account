@@ -36,4 +36,9 @@ public interface AccountController {
     public ResponseEntity<AccountOut> findById(
         @PathVariable String id
     );
+
+    @PostMapping("/accounts/login")
+    public ResponseEntity<AccountOut> findByEmailAndPassword(
+        @RequestBody AccountIn in
+    );
 }
